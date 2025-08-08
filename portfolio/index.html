@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LiCode">
+    <link rel="stylesheet" href="style.css">
+    <title>LiCode | Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link id="favicon" rel="icon" href="assets/icon-light.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function updateFavicon() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const favicon = document.getElementById('favicon');
+            favicon.href = isDark ? 'assets/icon-dark.png' : 'assets/icon-light.png';
+        }
+
+        updateFavicon(); // Initial call
+
+        // Si l'utilisateur change le thème en direct :
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="mp" data-aos="fade-down" id="home">
+            <p>LiCode <span><i class="fas fa-code"></i></span></p>
+        </div>
+        <ul data-aos="fade-left">
+            <li><a href="Tarifs.xlsx" download>Tarifs</a></li>
+            <!-- <li><a href="#projets">Projets</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="home" data-aos="fade-up">
+        <h1>"Je suis un développeur indépendant<span>.</span>"</h1>
+    </div>
+
+    <section class="à-propos">
+        <h1 data-aos="fade-up">À propos</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+            <strong>LiCode</strong> est un projet, qui, our moi m'est précieux et me sert à faire des fond pour mon futur.<br>
+            Je suis un petit développeur indépendant et passionné par le développement,<br>
+            Je suis développeur depuis <strong>4ans</strong>, je suis aussi autodidacte.
+            <br>Je n'ai pas encore eu de client. Je fais site vitrine avec plusieurs options.<br>
+            L'achat d'un site est <strong>satisfait ou remboursé</strong>.
+            <br><span class="author">- Raphael (13ans)</span><br><br>
+            <span class="offre">
+                <strong class="code">OFFRE -15%</strong> pour inaugurer l'ouverture de <strong>LiCode</strong> !
+            </span>
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <div data-aos="fade-up">
+            <h1>Contact</h1>
+            <p><span><i class="fa-solid fa-arrow-down"></i></span> Contactez moi <span><i class="fa-solid fa-arrow-down"></i></span></p>
+            <p><br><strong>EMAIL </strong><span><i class="fa-solid fa-envelope"></i></span> : mouchard-raphael@outlook.fr<br>
+            <strong>TEL </strong><span><i class="fa-solid fa-phone"></i></span> : +33 06 82 57 40 92</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Liam <span>Parfum</span></p>
+        <p class="right-footer">All right are reserved <span>&copy; 2025</span></p> 
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+</body>
+</html>

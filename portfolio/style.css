@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    background-color: #ebebeb;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+section {
+  position: relative;
+}
+header {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.mp p {
+    color: #363636;
+    font-weight: bold;
+    transition: 0.3;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    list-style: none;
+}
+ul li {
+    padding: 10px 25px;
+}
+ul li a {
+    text-decoration: none;
+    color: #999;
+    transition: 0.5s;
+    font-size: 14px;
+}
+ul li a:hover {
+    color: rgb(99, 99, 99);
+    font-weight: bold;
+}
+.home {
+    padding: 15px 30px;
+    background-color: #1d1d1d;
+    margin-top: 100px;
+    margin-left: 140px;
+    margin-right: 100px;
+    font-size: 30px;
+    color: #ffffff;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    display: flex;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.home h1 {
+    background-color: #1d1d1d;
+}
+.home span {
+    color: #686868;
+    background-color: #1d1d1d;
+}
+.à-propos {
+    padding: 15px 30px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 100px;
+    color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+}
+
+.à-propos h1 {
+    margin: 20px 0;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.à-propos p {
+    font-size: 20px;
+}
+.author {
+    font-size: 13px;
+    color:#686868;
+}
+.offre {
+    font-size: 23px;
+}
+.code {
+    color: rgb(241, 0, 0);
+}
+.contact {
+    padding: 15px 30px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 130px;
+    color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.contact h1 {
+    margin: 20px 0;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.contact p {
+    font-size: 20px;
+}
+footer {
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.4);
+    margin-top: 300px;
+    background-color: #1d1d1d;
+    padding: 15px 0;
+    text-align: center;
+}
+footer p, footer span {
+    background-color: #1d1d1d;
+    color: #fff;
+    font-weight: bold;
+}
+footer .right-footer {
+    background-color: #1d1d1d;
+    color: #999;
+    font-size: 14px;
+}
+footer .right-footer span {
+    background-color: #1d1d1d;
+    color: #00c3ff;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  ul {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 50px 20px;
+    font-size: 24px;
+  }
+
+  .à-propos,
+  .contact {
+    margin: 50px 20px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    font-size: 20px;
+  }
+
+  .à-propos h1,
+  .contact h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .à-propos p,
+  .contact p {
+    font-size: 16px;
+  }
+
+  .contact {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  ul li {
+    padding: 10px;
+  }
+
+  .home,
+  .à-propos,
+  .contact {
+    margin: 30px 10px;
+  }
+
+  footer p,
+  footer .right-footer {
+    font-size: 12px;
+  }
+}
+
+/* Ajout optionnel : adapter la taille des icônes */
+@media screen and (max-width: 600px) {
+  i {
+    font-size: 16px;
+  }
+}
