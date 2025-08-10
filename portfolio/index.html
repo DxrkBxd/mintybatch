@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="LiCode">
     <link rel="stylesheet" href="style.css">
-    <title>LiCode | Portfolio</title>
+    <title>LiCode | Présentation</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link id="favicon" rel="icon" href="assets/icon-light.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,36 +28,63 @@
             <p>LiCode <span><i class="fas fa-code"></i></span></p>
         </div>
         <ul data-aos="fade-left">
-            <li><a href="#" download>Formulaire</a></li>
+            <li><a href="#offers" class="scroll-link">Offres</a></li>
+            <li><a href="#services" class="scroll-link">Services</a></li>
+            <li><a href="#contact" class="scroll-link">Contact</a></li>
             <!-- <li><a href="#projets">Projets</a></li> -->
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Support</a></li>
         </ul>
-        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+        <ul>
+            <li><a href="../index.html" class="logos"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#" class="logos"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
     </header>
 
     <div class="home" data-aos="fade-up">
-        <h1>"Je suis un développeur indépendant<span>.</span>"</h1>
+        <h1>"Donnez vie à votre image en ligne<span>.</span>"</h1>
     </div>
 
     <section class="à-propos">
         <div class="left">
-            <h1 data-aos="fade-up">À propos</h1>
+            <h1 data-aos="fade-up">- À propos</h1>
             <p data-aos="fade-up" data-aos-delay="200">
-                LiCode est une platforme vous permettant d'acheter des sites vitrines.<br>
-                Il y a plusieurs forfaits, suivant vos choix et vos nécessitées.<br>
-                LiCode a été lancé par <strong>Nekoz</strong>, c'est un jeune développeur,<br>
-                qui développe des site web depuis <strong>4ans</strong>.<br>
-                Nous n'avons pas <em>encore</em> eu de client.<br>
-                <strong>LiCode a hâte de faire affaire avec vous</strong>.
-                <br><span class="author">- Nekoz</span><br><br>
+                Je suis Raphael, je suis un développeur <em>junior</em>, cela fait 4 ans que je fais du <strong>développement web</strong>.<br>
+                LiCode vous permet d'acheter des sites vitrines de qualité avec plusieurs options selon vos choix.<br>
+                LiCode a hâte de faire affaire avec <strong>vous</strong>.
+                <br><span class="author">- Raphael</span><br><br>
                 <span class="offre">
                     <strong class="code">OFFRE -15%</strong> pour inaugurer l'ouverture de <strong>LiCode</strong> !
                 </span>
             </p>
         </div>
-        <div class="right" data-aos="fade-up">
-            <img src="assets/bg.png" alt="">
+        <div class="right">
+            <img src="assets/exemple_1.png" alt="">
         </div>
+    </section>
+
+    <section id="offers">
+        <div class="offers">
+            <h1 data-aos="fade-up">Offres</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+            LiCode vous propose des offres adaptées à votre budget et à vos besoins.<br>
+            Nous croyons que chaque projet mérite un site vitrine unique,<br>qui reflète votre personnalité et votre savoir-faire.<br>
+            Ensemble, nous concevons un design qui vous ressemble, facile à utiliser et agréable à visiter.<br>
+            Que vous soyez artisan, commerçant ou entrepreneur, nous vous accompagnons pour mettre en valeur votre activité en ligne.<br>
+            </p>
+            <a href="offres/offres.html">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h1>Services</h1>
+        <p>
+        Création de sites vitrine. -<br>
+        Optimisation SEO. -<br>
+        Design responsive. -<br>
+        Une seule requête et le site est prêt a être employé. -<br>
+        Intégration des réseaux sociaux. -<br>
+        Très intéressant pour les PME. -<br>
+        </p>
     </section>
 
     <section class="contact" id="contact">
@@ -85,6 +112,58 @@
             once: true
         });
     </script>
-</body>
+    <!-- place ce script juste avant </body> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Si tu as un header fixe, mets ici son sélecteur (ex: '.site-header' ou 'header').
+        // Si pas de header fixe, mets null.
+        const headerSelector = '.site-header'; // ← adapte ou mets null
 
+        const header = headerSelector ? document.querySelector(headerSelector) : null;
+        const getHeaderOffset = () => (header ? header.offsetHeight : 0);
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+            const hash = this.getAttribute('href');
+            if (!hash || hash === '#') return; // ignore href="#" ou vide
+
+            const target = document.querySelector(hash);
+            if (!target) {
+                console.warn('Cible introuvable pour', hash);
+                return;
+            }
+
+            e.preventDefault();
+
+            // Recalcule AOS si utilisé (prévenir les décalages)
+            if (typeof AOS !== 'undefined' && typeof AOS.refresh === 'function') {
+                AOS.refresh();
+            }
+
+            const headerOffset = getHeaderOffset();
+            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = Math.max(elementPosition - headerOffset - 16, 0); // 16px marge
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Met à jour l'URL sans provoquer de "saut"
+            if (history.pushState) {
+                history.pushState(null, '', hash);
+            } else {
+                location.hash = hash;
+            }
+
+            // accessibilité : focus sur la cible après le scroll
+            setTimeout(() => {
+                target.setAttribute('tabindex', '-1'); // pour pouvoir focus si non focusable
+                target.focus({preventScroll: true});
+            }, 600); // 600ms ≈ durée du scroll
+            });
+        });
+        });
+    </script>
+</body>
 </html>
