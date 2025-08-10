@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LiCode">
+    <link rel="stylesheet" href="style.css">
+    <title>LiCode | Offres</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link id="favicon" rel="icon" href="assets/icon-light.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function updateFavicon() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const favicon = document.getElementById('favicon');
+            favicon.href = isDark ? '../assets/icon-dark.png' : '../assets/icon-light.png';
+        }
+
+        updateFavicon(); // Initial call
+
+        // Si l'utilisateur change le thème en direct :
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="mp" data-aos="fade-down" id="home">
+            <p>LiCode <span><i class="fas fa-code"></i></span></p>
+        </div>
+        <a href="../index.html" class="logos"><i class="fa-solid fa-house"></i></a>
+    </header>
+    <h1 data-aos="fade-up">_ OFFRES _</h1>
+
+    <div class="text" data-aos="fade-up" data-aos-delay="200">
+        <ul>
+            <li>
+                <h2>Classique</h2>
+                <p><span><i class="fa-solid fa-check"></i></span> Livré en 4 jours.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Une page simple.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Style moderne et épuré.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Adapté à tous les écrans (responsive design).</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Formulaire classique (google form).</p>
+                <p class="lined">Modification après déploiment.</p>
+                <p class="lined">Hébergement et adresse inclus.</p>
+                <p class="lined">Galerie d'images intégrée.</p>
+                <p><br>Prix : <span>200€</span><br><br><br></p>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h2>Pro</h2>
+                    <p><span><i class="fa-solid fa-check"></i></span> Livré en 14 jours.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Site complet avec plusieurs pages et animations.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Optimisation SEO pour un meilleur référencement.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Intégration de formulaires et modules personnalisés.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Actualités intégrés.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Galerie d'images intégrée.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Sauvegardes automatiques hebdomadaires.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Connexion aux réseaux sociaux.</p>
+                    <p class="lined">Hébergement et addresse inclus.</p>
+                    <p><br>Prix : <span>650€</span><br><br><br></p>
+                </div>
+            </li>
+            <li>
+                <h2>Dynamique</h2>
+                <p><span><i class="fa-solid fa-check"></i></span> Livré en 7 jours.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Site vitrine multi-sections (Accueil, Services, Contact…).</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Esthetique dynamique.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Adapté à tous les écrans (responsive design).</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Galerie d'images intégrée.</p>
+                <p><span><i class="fa-solid fa-check"></i></span> Connexion aux réseaux sociaux.</p>
+                <p class="lined">Modification après déploiment</p>
+                <p class="lined">Hébergement et addresse inclus.</p>
+                <p><br>Prix : <span>400€</span><br><br><br></p>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h2>Customisé</h2>
+                    <p><span><i class="fa-solid fa-check"></i></span> Délai selon projet.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Design et fonctionnalités 100% sur mesure.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Intégration d'éléments interactifs.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Espace client sécurisé.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Système de réservation ou boutique en ligne si souhaité.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Formation complète à la gestion du site.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Modification après déploiement.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Hébergement et addresse inclus.</p>
+                    <p><span><i class="fa-solid fa-check"></i></span> Blog et retour d'avis.</p>
+                    <p><br>Prix : <span class="tooltip" tabindex="0">SELON LE PROJET<span class="tooltip-text">Variant de 800€ à 1800€.</span></span><br><br><br></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+</body>
+</html>
