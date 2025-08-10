@@ -16,16 +16,6 @@ header {
     align-items: center;
     width: 100%;
 }
-header a i {
-    text-decoration: none;
-    color: #707070;
-    transition: 0.5s;
-    font-size: 18px;
-}
-header a i:hover {
-    color: rgb(78, 78, 78);
-    font-weight: bold;
-}
 .mp p {
     color: #363636;
     font-weight: bold;
@@ -47,6 +37,16 @@ ul li a {
     font-size: 14px;
 }
 ul li a:hover {
+    color: rgb(78, 78, 78);
+    font-weight: bold;
+}
+.logos {
+    text-decoration: none;
+    color: #707070;
+    transition: 0.5s;
+    font-size: 18px;
+}
+.logos:hover {
     color: rgb(78, 78, 78);
     font-weight: bold;
 }
@@ -92,9 +92,10 @@ ul li a:hover {
     max-width: 100%;
 }
 .right img {
-    margin-top: 150px;
+    margin-top: 95px;
+    margin-left: 20px;
+    border: solid 6px #fff;
     object-fit: cover;
-    border: 3px solid #ffffff;
     box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
     border-radius: 2rem;
     width: 100%;
@@ -123,6 +124,71 @@ ul li a:hover {
 }
 .code {
     color: rgb(241, 0, 0);
+}
+.offers {
+    padding: 30px 60px;
+    margin: 100px auto 0 auto;
+    color: #1d1d1d;
+    background: none;
+    display: flex;
+    flex-direction: column; /* empile verticalement */
+    align-items: center; /* centre horizontalement */
+    gap: 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+.offers h1 {
+    margin: 20px 0;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.offers p {
+    font-size: 20px;
+    background-color: transparent;
+    text-align: center;
+    line-height: 1.6;
+}
+.offers a i {
+    background-color: transparent;
+}
+.offers a {
+    color: white;
+    text-decoration: none;
+    border: solid 2px #1d1d1d;
+    border-radius: 5px;
+    background-color: #1d1d1d;
+    padding: 2px 18px;
+    transition: 0.5s;
+}
+.offers a:hover {
+    background-color: #363636;
+    border: solid 2px #363636;
+}
+.services {
+    padding: 30px 60px;
+    margin: 100px auto 0 auto;
+    color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    text-align: end;
+    box-sizing: border-box;
+}
+.services h1 {
+    margin: 20px 0;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.services p {
+    margin-top: -20px;
+    font-size: 20px;
+    background-color: transparent;
+    line-height: 1.6;
 }
 .contact {
     padding: 15px 30px;
